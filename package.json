@@ -1,0 +1,33 @@
+{
+  "name": "asset-diff",
+  "version": "0.1.0",
+  "description": "Compares a base asset pack against a reskin candidate by names",
+  "type": "module",
+  "bin": {
+    "asset-diff": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "tsx src/cli.ts ~/Desktop/PlayCognito/games/fox-mystic-quest/assets/spines ~/Desktop/PlayCognito/games/biochrome-city/assets/main/spine",
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@esotericsoftware/spine-core": "4.2.89",
+    "commander": "^12.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
