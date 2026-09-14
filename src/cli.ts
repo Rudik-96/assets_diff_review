@@ -35,11 +35,11 @@ program
       process.exit(2);
     }
 
-    // if (options.json) {
-    //   console.log(JSON.stringify(report, null, 2));
-    // } else {
-    //   printReport(report, options.verbose);
-    // }
+    if (options.json) {
+      console.log(JSON.stringify(report, null, 2));
+    } else {
+      printReport(report, options.verbose);
+    }
 
     const { errors, warnings } = report.summary;
     const failed =
